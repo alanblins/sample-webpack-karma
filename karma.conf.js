@@ -1,6 +1,6 @@
 // Karma configuration
 // Generated on Sat Dec 16 2017 21:28:11 GMT+0000 (Hora Padrão de Greenwich)
-
+process.env.CHROME_BIN = require('puppeteer').executablePath()
 module.exports = function (config) {
   config.set({
 
@@ -52,10 +52,10 @@ module.exports = function (config) {
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
     browsers: ['Chrome'],
     customLaunchers: {
-        Chrome_travis_ci: {
-            base: 'Chrome',
-            flags: ['--no-sandbox']
-        }
+      Chrome_travis_ci: {
+        base: 'Chrome',
+        flags: ['--no-sandbox']
+      }
     },
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
@@ -67,9 +67,9 @@ module.exports = function (config) {
   })
 
   if (process.env.TRAVIS) {
-    config.browsers = ['Chrome_travis_ci'];
-} 
+    config.browsers = ['ChromeHeadless'];
+  }
 }
 
 
- 
+
