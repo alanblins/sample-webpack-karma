@@ -28,7 +28,7 @@
     "karma-spec-reporter": "0.0.32",
     "karma-webpack": "^2.0.9",
     "mocha": "^4.0.1",
-    "puppeteer": "^0.13.0",
+    "puppeteer": "^5.3.0",
     "sinon": "^4.1.3"
   }
 }
